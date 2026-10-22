@@ -42,12 +42,4 @@ A beginner-friendly static website for practising basic web accessibility checks
 - The form is front-end only. It does not send or store personal information.
 - Do not claim you performed tests or fixed issues until you have actually done so.
 
-## Resume description — use after you have completed the work
 
-**Web Accessibility Testing and Remediation** | HTML, CSS, JavaScript
-
-- Tested a sample website for keyboard navigation, semantic structure, form labels, and visible focus.
-- Identified and fixed accessibility issues, then retested the affected interactions.
-- Documented findings and remediation steps using WCAG fundamentals.
-
-Only keep bullets that accurately describe what you personally completed.
