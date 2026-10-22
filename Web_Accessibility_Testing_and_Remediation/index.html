@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A practice project demonstrating basic web accessibility checks and remediation.">
+  <title>Accessible Web Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Learning project</p>
+      <h1>Accessible Web Demo</h1>
+      <p>A small demo site for practising inclusive web design and accessibility testing.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container nav-links">
+      <a href="#features">Features</a>
+      <a href="#contact">Contact form</a>
+      <a href="#checklist">Testing checklist</a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+    <section id="features" aria-labelledby="features-heading" class="panel">
+      <h2 id="features-heading">Accessibility features demonstrated</h2>
+      <ul>
+        <li>Semantic HTML landmarks and a logical heading structure.</li>
+        <li>A keyboard-accessible skip link and visible focus indicators.</li>
+        <li>Explicit labels and helpful error messages for form fields.</li>
+        <li>Responsive layout and a high-contrast visual design.</li>
+      </ul>
+      <p class="note"><strong>Learning note:</strong> These are examples to test, not a claim of WCAG conformance. Use the checklist below and verify the page with manual and automated checks.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading" class="panel">
+      <h2 id="contact-heading">Accessible contact form</h2>
+      <p>Submit the form to see basic client-side validation and a status message.</p>
+      <form id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+          <input id="full-name" name="fullName" autocomplete="name" required aria-describedby="name-hint name-error">
+          <p id="name-hint" class="hint">Enter your first and last name.</p>
+          <p id="name-error" class="error" hidden></p>
+        </div>
+        <div class="form-field">
+          <label for="email">Email address <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+          <p id="email-hint" class="hint">Use an email address in the format name@example.com.</p>
+          <p id="email-error" class="error" hidden></p>
+        </div>
+        <div class="form-field">
+          <label for="topic">What would you like to discuss?</label>
+          <select id="topic" name="topic">
+            <option value="">Choose a topic (optional)</option>
+            <option value="feedback">Website feedback</option>
+            <option value="accessibility">Accessibility</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="submit">Submit form</button>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="checklist" aria-labelledby="checklist-heading" class="panel">
+      <h2 id="checklist-heading">Manual testing checklist</h2>
+      <p>Use these checks as a starting point. Tick each item after you test it yourself.</p>
+      <ul class="checklist">
+        <li><label><input type="checkbox"> Navigate through links and form controls using only the keyboard.</label></li>
+        <li><label><input type="checkbox"> Confirm focus is clearly visible and follows a logical order.</label></li>
+        <li><label><input type="checkbox"> Try submitting the form with empty or invalid values.</label></li>
+        <li><label><input type="checkbox"> Zoom the page to 200% and check that content remains usable.</label></li>
+        <li><label><input type="checkbox"> Check text and interactive-control contrast with a contrast checker.</label></li>
+        <li><label><input type="checkbox"> Run an accessibility checker, then manually verify its findings.</label></li>
+      </ul>
+      <p class="note">Automated tools cannot detect every accessibility issue. Record the browser, steps, expected result, actual result, and fix for each issue you find.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Practice project for learning web accessibility testing.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
